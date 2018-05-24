@@ -1,65 +1,42 @@
 # OSDK README
 
-This is the README for your extension "osdk". 
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This extensions provides xa65 syntax hilighting
 
-For example if there is an image subfolder under your extension project workspace:
+## Syntax Highlighting
 
-\!\[feature X\]\(images/feature-x.png\)
+This extension manages XA syntax Highlighting. 
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Opcodes : 
 
-## Requirements
+adc, and, asl, bcc, bcs, beq, bit, bmi, bne, bpl, brk, bvc, bvs, clc, cld, cli, clv, cmp, cpx, cpy, dec, dex, dey, eor, inc, inx, iny, jmp, jsr, lda, ldx, ldy, lsr, nop, ora, pha, php, pla, plp, rol, ror, rti, rts, sbc, sec, sed, sei, sta, stx, sty, tax, tay, tsx, txa, txs, tya
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+XA Directives :
 
-## Extension Settings
+.asc, .byt, .asc, .byte, .data, .text, .zero, .bss
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+XA preprocessor directives : 
 
-For example:
+#ifdef/#else/#endif
 
-This extension contributes the following settings:
+XA syntax highlighting
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### 0.0.3
 
-## Known Issues
+Fix typo
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### 0.0.2
 
-## Release Notes
+Fix // comment
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
+Syntax highlight
 
-Initial release of ...
+## Source code 
+Maintainer : jede
 
-### 1.0.1
+https://github.com/oric-software/osdkVsExtension
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

@@ -8,7 +8,7 @@
 		<string>s</string>
 	</array>
 	<key>name</key>
-	<string>6502/BeebAsm Assembly</string>
+	<string>6502/xa Assembly</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -29,7 +29,7 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#beebasm</string>
+			<string>#xa</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -75,10 +75,11 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)((^|\s+)(#(ifdef|ifndef))|\s+ift|^\s+(eli|els|eif)|^\s*(#(else|elseif|endif)))\b</string>
+					<string>(?i)((^|\s+)(#(define|include|ifdef|ifndef))|\s+ift|^\s+(eli|els|eif)|^\s*(#(else|elseif|endif)))\b</string>
 					<key>name</key>
 					<string>keyword.control.if</string>
-				</dict>
+                </dict>
+
 			</array>
 		</dict>
 		<key>6502</key>
@@ -99,7 +100,7 @@
 				</dict>
 			</array>
 		</dict>
-		<key>beebasm</key>
+		<key>xa</key>
 		<dict>
 			<key>patterns</key>
 			<array>
@@ -111,40 +112,10 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)(\s+|((^|\s+|(?<=\())))(cpu|skip|skipto|incbin|mapchar|guard|clear|save|for|next|if|elif|else|endif|putfile|putbasic|macro|endmacro)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
-					<key>name</key>
-					<string>keyword</string>
-				</dict>		
-				<dict>
-					<key>match</key>
-					<string>(?i)(\s+|((^|\s+|(?<=\())))(.asc|.byt|.asc|.byte)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
+					<string>(?i)(\s+|((^|\s+|(?<=\())))(.asc|.align|.byt|.asc|.byte|.data|.text|.zero|.bss)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
 					<key>name</key>
 					<string>storage.type</string>
 				</dict>		
-				<dict>
-					<key>match</key>
-					<string>(?i)(\s+|((^|\s+|(?<=\())))(.align)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
-					<key>name</key>
-					<string>storage.modifier</string>
-				</dict>									
-				<dict>
-					<key>match</key>
-					<string>(?i)(\s+|((^|\s+|(?<=\())))(true|false|pi|p%)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
-					<key>name</key>
-					<string>constant.regexp</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>(?i)(lo|hi|sqr|sin|cos|tan|acs|asn|atn|rad|deg|abs|int|sgn|rnd|not|log|ln|exp)(?=\()\b</string>
-					<key>name</key>
-					<string>keyword.other.functions</string>
-				</dict>		
-				<dict>
-					<key>match</key>
-					<string>(?i)(\s+|((^|\s+|(?<=\())))(print|error)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
-					<key>name</key>
-					<string>keyword.other.debug</string>
-				</dict>									
 			</array>
 		</dict>
 		<key>labels</key>
@@ -177,6 +148,13 @@
 					<key>name</key>
 					<string>comment.line.semicolon</string>
 				</dict>
+                <dict>
+                    <key>match</key>
+                    <string>//.*</string>
+                    <key>name</key>
+                    <string>comment.line.slash-slash</string>
+                </dict>
+
 				<dict>
 					<key>match</key>
 					<string>\\.*</string>

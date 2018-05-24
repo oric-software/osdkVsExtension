@@ -2,7 +2,7 @@
     "name": "osdk",
     "displayName": "OSDK",
     "description": "Oric Software Development Kit",
-    "version": "0.0.1",
+    "version": "0.0.5",
     "publisher": "Jede",
 	"icon": "images/icon.png",
     "engines": {
@@ -11,19 +11,18 @@
 	"categories": [
 		"Languages"
 	],
+    "repository": {
+        "type": "git",
+	    "url": "https://github.com/oric-software/osdkVsExtension"
+	},
 	"keywords": [
 		"osdk",
 		"6502",
 		"65C02",
 		"65C816",		
-		"65816",
 		"oric"
 
 	],
-    "activationEvents": [
-        "onCommand:extension.sayHello"
-    ],
-    "main": "./extension",
 	
 	"contributes": {
 		"languages": [
