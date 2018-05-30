@@ -75,7 +75,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)((^|\s+)(#(define|include|ifdef|ifndef))|\s+ift|^\s+(eli|els|eif)|^\s*(#(else|elseif|endif)))\b</string>
+					<string>(?i)((^|\s+)(#(define|echo|file|print|printdef|iflused|ifldef|include|ifdef|ifndef))|\s+ift|^\s+(eli|els|eif)|^\s*(#(else|elseif|endif)))\b</string>
 					<key>name</key>
 					<string>keyword.control.if</string>
                 </dict>
@@ -94,7 +94,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)(\s+|(?<=:))(stz|phx|phy|plx|ply)(?=\s+|[:$#(])</string>
+					<string>(?i)(\s+|(?<=:))(bbr|bbs|bra|phx|phy|plx|ply|stp|stz|wai)(?=\s+|[:$#(])</string>
 					<key>name</key>
 					<string>keyword.other.opcode.6502.illegal</string>
 				</dict>
@@ -112,7 +112,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>(?i)(\s+|((^|\s+|(?<=\())))(.asc|.align|.byt|.asc|.byte|.data|.text|.zero|.bss)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
+					<string>(?i)(\s+|((^|\s+|(?<=\())))(.fopt|.dsb|.align|.byt|.asc|.byte|.data|.text|.zero|.bss)(?=\.[bzwaqlt]|\s+|[:$#(\\])</string>
 					<key>name</key>
 					<string>storage.type</string>
 				</dict>		

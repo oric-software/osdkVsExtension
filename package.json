@@ -2,7 +2,7 @@
     "name": "osdk",
     "displayName": "OSDK",
     "description": "Oric Software Development Kit",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "Jede",
 	"icon": "images/icon.png",
     "engines": {
